@@ -70,5 +70,18 @@ class Game
       formatted_name = player.name.ljust(20, '.')
       puts "#{formatted_name} #{player.score}"
     end
+
+    #Inside the print_stats method of the Game class, 
+    #iterate through each player in the game. For 
+    #each player, call the each_found_treasure method 
+    #with a block that takes a treasure as a block parameter. 
+    #Inside the block, print out the treasure's name and points.
+    @players.each do |player|
+      puts "#{player.name}'s total points:"
+      player.each_found_treasure do |treasure|
+        puts "#{treasure.points} total #{treasure.name} points"
+      end
+      puts "#{player.points} grand total points."
+    end
   end
 end
