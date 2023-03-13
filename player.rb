@@ -5,8 +5,7 @@ class Player
 
   include Playable 
   
-  attr_accessor :name
-  attr_reader :health
+  attr_accessor :name, :health
 
   def self.from_csv(string) 
     name, health = string.split(',')

@@ -1,10 +1,5 @@
 require_relative 'player'
 
-# Specialize the behavior of the ClumsyPlayer so that he has a counter-balance to his clumsy ways. 
-# As an upside to only getting half points for each treasure, give him an extra boost (or ten) 
-# in health every time he's w00ted. To do that, initialize a clumsy player with a number 
-# representing his boost factor. Every time he's w00ted, give him that number of w00ts.
-
 class ClumsyPlayer < Player 
   attr_reader 'boost_factor'
 
